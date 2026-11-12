@@ -1,0 +1,40 @@
+:root{--bg:#f1eefb;--card:#fff;--ink:#2b2250;--acc:#5b4bd6;--line:#d9d2f3;--good:#35b58a;--low:#e5484d}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.4 ui-rounded,"Nunito","Trebuchet MS",system-ui,sans-serif;display:flex;justify-content:center;-webkit-tap-highlight-color:transparent}
+main{width:100%;max-width:460px;padding:max(12px,env(safe-area-inset-top)) 14px max(24px,env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:12px}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+header{display:flex;justify-content:space-between;align-items:center}
+#name{font-weight:800;font-size:24px;letter-spacing:-.01em}
+.coins{background:#ffe08a;border-radius:99px;padding:4px 14px;font-weight:800}
+#room{position:relative;height:260px;border-radius:28px 28px 12px 12px;background:linear-gradient(#bfe8d6 0 68%,#e2b46f 68%);display:grid;place-items:center;overflow:hidden;transition:filter .6s}
+#room.night{filter:brightness(.5) saturate(.8)}
+#hamster{position:relative;font-size:112px;line-height:1;margin-top:34px;cursor:pointer;user-select:none;animation:breathe 3.2s ease-in-out infinite}
+#hat{position:absolute;top:-36px;left:50%;transform:translateX(-50%) rotate(-6deg);font-size:58px}
+#hamster.bounce{animation:hop .35s}
+#status{position:absolute;top:12px;left:12px;background:#ffffffcc;border-radius:99px;padding:3px 12px;font-weight:700;font-size:14px}
+#mood{position:absolute;top:8px;right:14px;font-size:34px}
+#msg{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;border-radius:99px;padding:4px 14px;font-size:14px;opacity:0;transition:opacity .2s;white-space:nowrap}
+#msg.show{opacity:1}
+#stats{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px}
+.bar label{font-size:13px;font-weight:700}
+.bar i{display:block;height:10px;border-radius:9px;background:var(--line);overflow:hidden;margin-top:2px}
+.bar b{display:block;height:100%;background:var(--good);border-radius:9px;transition:width .5s,background .5s}
+.bar b.low{background:var(--low)}
+#tabs{display:flex;gap:6px;background:var(--line);padding:4px;border-radius:16px}
+#tabs button{flex:1;padding:8px;border-radius:12px;font-weight:700}
+#tabs .on{background:var(--card);color:var(--acc)}
+#panel{display:grid;gap:8px}
+#panel>button,.grid button{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:12px 14px;text-align:left;font-weight:700;display:flex;justify-content:space-between;align-items:center}
+#panel small{font-weight:600;opacity:.7;font-size:13px}
+#panel h3{font-size:15px;margin-top:6px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.grid button{flex-direction:column;align-items:center;text-align:center;gap:2px}
+.grid .big{font-size:34px}
+.grid .on{border-color:var(--acc);background:#ebe8ff}
+button:active{transform:scale(.97)}
+button:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+footer{display:flex;justify-content:space-between;font-size:13px;opacity:.7}
+footer button{text-decoration:underline}
+@keyframes breathe{50%{transform:scale(1.04)}}
+@keyframes hop{40%{transform:translateY(-26px) scale(1.06)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

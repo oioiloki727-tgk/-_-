@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Мой хомячок</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <button id="name" title="Переименовать"></button>
+    <div class="coins">🪙 <span id="coins">0</span></div>
+  </header>
+  <section id="room">
+    <div id="status"></div><div id="mood"></div>
+    <div id="hamster"><span id="hat"></span><span id="body">🐹</span></div>
+    <div id="msg"></div>
+  </section>
+  <section id="stats">
+    <div class="bar"><label>🍽️ Сытость</label><i><b id="b-hunger"></b></i></div>
+    <div class="bar"><label>💛 Радость</label><i><b id="b-joy"></b></i></div>
+    <div class="bar"><label>⚡ Силы</label><i><b id="b-energy"></b></i></div>
+    <div class="bar"><label>🫧 Чистота</label><i><b id="b-clean"></b></i></div>
+  </section>
+  <nav id="tabs">
+    <button data-tab="care" class="on">Уход</button>
+    <button data-tab="food">Еда</button>
+    <button data-tab="shop">Магазин</button>
+  </nav>
+  <section id="panel"></section>
+  <footer><span id="age"></span> <button id="reset">Начать заново</button></footer>
+</main>
+<script src="game.js"></script>
+</body>
+</html>
